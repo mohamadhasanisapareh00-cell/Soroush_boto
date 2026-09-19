@@ -1,15 +1,11 @@
 FROM python:3.11-slim
 
-WORKDIR /app
+WORKDIR /tmp
 
-COPY requirements.txt .
+COPY requirements.txt /tmp/
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
-COPY . .
+COPY . /tmp/
 
-RUN mkdir -p /app/sessions && chmod 777 /app/sessions
-
-ENV SESSION_DIR=/app/sessions
-
-CMD ["python", "-u", "main.py"]
+CMD ["python", "-u", "/tmp/main.py"]
