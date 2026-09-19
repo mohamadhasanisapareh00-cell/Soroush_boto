@@ -4,7 +4,7 @@ import os
 import random
 import time
 
-from splusthon import SoroushClient as SplusClient
+from splusthon import SoroushClient as SplusClient, events
 
 # ============================================================
 # تنظیمات
@@ -1020,20 +1020,18 @@ async def owner_command(
 # ============================================================
 # دریافت پیام
 # ============================================================
-
-@client.on_message(
+@client.on(events.NewMessage(
     incoming=True
 )
 async def message_handler(event):
 
     try:
-
-        if getattr(
-            event,
-            "is_me",
-            False
-        ):
-            return
+if getattr(
+    event,
+    "out",
+    False
+):
+    return
 
         sender_id = event.sender_id
         chat_id = event.chat_id
