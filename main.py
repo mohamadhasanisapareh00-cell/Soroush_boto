@@ -1289,12 +1289,14 @@ async def main():
         "🔌 در حال اتصال به سروش..."
     )
 
-    phone = os.getenv("PHONE", "").strip()
+    phone = 
+    
+    .strip()
 
     if not phone:
 
         phone = 
-code = os.environ.get("SOROUSH_CODE")
+
         ).strip()
 
     if not phone:
