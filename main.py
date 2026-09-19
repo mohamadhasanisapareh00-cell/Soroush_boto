@@ -1025,8 +1025,7 @@ async def owner_command(
 )
 async def message_handler(event):
 
-    try:
-if getattr(
+ if getattr(
     event,
     "out",
     False
