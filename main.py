@@ -1293,8 +1293,8 @@ async def main():
 
     if not phone:
 
-        phone = input(
-            "📱 شماره سروش را با کد کشور وارد کن: "
+        phone = 
+code = os.environ.get("SOROUSH_CODE")
         ).strip()
 
     if not phone:
