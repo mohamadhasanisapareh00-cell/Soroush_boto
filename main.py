@@ -4,8 +4,7 @@ import os
 import random
 import time
 
-from spluslib import SplusClient
-
+from splusthon import SoroushClient as SplusClient
 
 # ============================================================
 # تنظیمات
