@@ -15,7 +15,7 @@ CONFIG_FILE = "config.json"
 DEFAULT_INTERVAL = 120
 MIN_INTERVAL = 30
 
-client = SplusClient("mmd_sender")
+client = SplusClient("/tmp/mmd_sender")
 
 stats = {
     "success": 0,
